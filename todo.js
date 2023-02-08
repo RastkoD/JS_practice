@@ -25,6 +25,9 @@ button.onclick = function () {
 
   let remove = document.createElement('button');
   remove.textContent = 'x';
+  remove.style.backgroundColor = "red";
+  remove.style.color = "white";
+  remove.style.border = "none";
 
   remove.onclick = function () {
       div.style.display = "none";
