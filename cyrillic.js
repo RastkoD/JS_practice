@@ -2,7 +2,6 @@ let input = document.querySelector('#input');
 let output = document.querySelector('#output');
 let button = document.querySelector('#button');
 
-console.log(input.value)
 
 const letters = [
   {a: 'a'},
@@ -65,6 +64,8 @@ const letters = [
   {Ž: 'Ж'}, 
   {ǆ: 'џ'},
   {ǅ: 'Џ'},
+  {ǳ: 'џ'},
+  {ǲ: 'Џ'},
   {',': ','},
   {".": "."},
   {" ": " "},
@@ -90,12 +91,10 @@ button.onclick = () => {
       }
     }
   }
-  console.log(array3);
-  output.value = array3.map(object => object.value2).join('');
 
-  for (let k = 0; k < output.value.length; k++) {
+  let other = array3.map(object => object.value2).join('');
 
-  }
+  output.value = other;
 };
 
 
