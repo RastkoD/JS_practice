@@ -87,40 +87,13 @@ button.onclick = () => {
     for (let j = 0; j < letters.length; j++) {
       let cyr = Object.keys(letters[j])[0];
       if (lat[i] === cyr) {
-        array3.push({value2: letters[j][cyr]});
+        array3.push({value: letters[j][cyr]});
       }
     }
   }
 
-  let other = array3.map(object => object.value2).join('');
+  let other = array3.map(object => object.value).join('');
 
   output.value = other;
 };
 
-
-
-
-
-/*for (let j in letters) {
-
-    console.log(letters[j])
-  }
-
-
-  console.log(typeof(lat[4]) == typeof(letters.g))
-  console.log(lat[4], letters.g)
-
-/*
-function matchProperties(array1, array2) {
-  let array3 = [];
-  for (let i = 0; i < array1.length; i++) {
-    for (let j = 0; j < array2.length; j++) {
-      if (array1[i].property === array2[j].property) {
-        array3.push({property: array1[i].property, value1: array1[i].value, value2: array2[j].value});
-      }
-    }
-  }
-  return array3;
-}
-
-*/
