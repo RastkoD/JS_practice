@@ -1,6 +1,7 @@
 //let name = prompt("Enter your name:").toLowerCase();
 let name = "admin";
 let nameParagraph = document.getElementById("name");
+let carStats = document.getElementById("carStats");
 
 nameParagraph.innerText = name;
 
@@ -43,5 +44,21 @@ carsElement.innerHTML = "<h3>Cars</h3>";
 carsElement.innerHTML += "<p>For sale:</p>"; //!
 
 for (let i = 0; i < cars.length; i++) {
-  carsElement.innerHTML += "<p>" + cars[i] + "</p>";
+  //carsElement.innerHTML += "<p>" + cars[i] + "</p>";
+  carsElement.innerHTML += `<p>${cars[i]}</p>`;
+}
+
+for (let car of cars) {
+  console.log(car);
+}
+
+let carCharacteristics = {
+  brand: "Opel",
+  model: "Insignia",
+  fuel: "Diesel",
+};
+
+// in za objekte
+for (let key in carCharacteristics) {
+  carStats.innerHTML += `<p>${key}: ${carCharacteristics[key]} </p>`;
 }
