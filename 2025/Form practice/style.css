@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+main {
+  background-color: azure;
+  width: 30rem;
+  height: 14rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 100%;
+}
+
+input {
+  width: min-content;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
