@@ -22,9 +22,17 @@ const colours = [
 ];
 
 const colorChangeDiv = document.getElementById("clrOnHover");
+const colorChangeBtn = document.getElementById("clrOnClick");
 
 colorChangeDiv.addEventListener("mouseover", () => {
   const randomClr = colours[Math.floor(Math.random() * colours.length)];
 
   colorChangeDiv.style.backgroundColor = randomClr;
+});
+
+colorChangeBtn.addEventListener("click", () => {
+  const randomClr = colours[Math.floor(Math.random() * colours.length)];
+  const body = document.body;
+
+  body.style.backgroundColor = randomClr;
 });

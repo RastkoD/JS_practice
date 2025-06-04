@@ -16,3 +16,20 @@ body {
   padding: 8rem;
   border: 8px solid rgb(187, 153, 16);
 }
+
+#clrOnClick {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem;
+  background-color: rgb(187, 153, 16);
+  border: 1px solid rgb(165, 135, 15);
+  font-weight: bolder;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgb(165, 135, 15);
+    border: 1px solid rgb(187, 153, 16);
+    cursor: pointer;
+  }
+}
