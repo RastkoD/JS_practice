@@ -8,14 +8,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <form action="">
+    <main role="main">
+      <form action="#" role="form">
         <h2>My Form</h2>
         <div class="flex">
-          <input type="text" id="fname" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
+          <label for="fname" class="sr-only">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="fname"
+            placeholder="First Name"
+            autocomplete="given-name"
+            required
+          />
+          <label for="lname" class="sr-only">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lname"
+            placeholder="Last Name"
+            autocomplete="family-name"
+            required
+          />
         </div>
-        <textarea name="" id=""></textarea>
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" autocomplete="off"></textarea>
         <div class="flexCol">
           <div class="flex">
             <label for="subscribe">Subscribe to newsletter</label>
@@ -26,11 +43,32 @@
               value="newsletter"
             />
           </div>
-          <input type="email" placeholder="Enter your email" />
+          <label for="email" class="sr-only">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          />
         </div>
-        <input type="submit" value="Submit" />
+        <input
+          type="submit"
+          name="submit"
+          value="Submit"
+          aria-label="Submit form"
+        />
       </form>
     </main>
+    <p>
+      Task:
+      <a
+        class="taskLink"
+        href="https://docs.google.com/document/d/1zC4wts9HVIxBVdAdGrbk32-JEAbQh-orMGCMZE3sKAI/mobilebasic?usp=gmail"
+        >link</a
+      >
+    </p>
     <script src="script.js"></script>
   </body>
 </html>
