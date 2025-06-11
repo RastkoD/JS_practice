@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <p id="popup"></p>
     <main role="main">
-      <form action="#" role="form">
+      <form id="form" action="#" role="form">
         <h2>My Form</h2>
         <div class="flex">
           <label for="fname" class="sr-only">First Name</label>
@@ -50,10 +51,10 @@
             id="email"
             placeholder="Enter your email"
             autocomplete="email"
-            required
           />
         </div>
         <input
+          id="submitBtn"
           type="submit"
           name="submit"
           value="Submit"

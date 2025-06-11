@@ -8,6 +8,8 @@ body {
   place-content: center;
   height: 100vh;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 main {
@@ -15,7 +17,7 @@ main {
   width: 30rem;
   height: 14rem;
   padding: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.301);
+  border: 1px solid rgba(0, 0, 0, 0.103);
 }
 
 form {
@@ -35,6 +37,16 @@ input {
   gap: 0.5rem;
 }
 
+#email {
+  opacity: 0;
+  cursor: default;
+  transition: opacity 0.3s ease-in-out, cursor 0.3s ease-in-out;
+}
+
+#submitBtn {
+  padding: 0.2rem 0.5rem;
+}
+
 .flexCol {
   display: flex;
   flex-direction: column;
@@ -52,5 +64,12 @@ input {
   border: 0;
 }
 
-.taskLink {
+#popup {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.103);
+  background: whitesmoke;
+  transition: all 0.3s ease-in-out;
 }
