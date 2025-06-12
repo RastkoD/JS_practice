@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Accordion</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <h1>Accordion</h1>
+        <div class="accordion" id="accordion">
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="contentOne"
+            >
+              <h4>Accordion itemOne heading</h4>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 10l5 5 5-5z" />
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="contentOne">
+              <div class="accordion-content-inner">
+                <p>
+                  Accordionccordion itemOne contentccordion itemOne
+                  contentccordion itemOne contentccordion itemOne
+                  contentccordion itemOne content itemOne content
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="contentTwo"
+            >
+              <h4>Accordion itemTwo heading</h4>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 10l5 5 5-5z" />
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="contentTwo">
+              <div class="accordion-content-inner">
+                <p>Accordion itemTWo content</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="contentThree"
+            >
+              <h4>Accordion itemThree heading</h4>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 10l5 5 5-5z" />
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="contentThree">
+              <div class="accordion-content-inner">
+                <p>Accordion itemThree content</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

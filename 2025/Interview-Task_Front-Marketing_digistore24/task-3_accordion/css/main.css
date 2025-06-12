@@ -1,0 +1,150 @@
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  --accordion-bg: #ffffff;
+  --accordion-border: #e2e8f0;
+  --accordion-header-bg: #f8fafc;
+  --accordion-header-hover: #dee2e6;
+  --accordion-header-active: #e2e8f0;
+  --accordion-text: #1e293b;
+  --accordion-text-secondary: #64748b;
+  --accordion-focus: #3b82f6;
+  --accordion-radius: 8px;
+  --accordion-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --accordion-transition: 0.3s ease-in;
+  --accordion-icon-size: 16px;
+  --accordion-padding: 1rem;
+  --accordion-gap: 0.5rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--accordion-text);
+  background: var(--accordion-bg);
+  margin: 0;
+  padding: 2rem;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  border-radius: var(--accordion-radius);
+  box-shadow: var(--accordion-shadow);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--accordion-border);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  background: var(--accordion-header-bg);
+  border: none;
+  width: 100%;
+  padding: var(--accordion-padding);
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accordion-text);
+  transition: background-color var(--accordion-transition);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.accordion-header:hover {
+  background: var(--accordion-header-hover);
+}
+
+.accordion-header-focus {
+  outline: 2px solid var(--accordion-focus);
+  outline-offset: -2px;
+  background: var(--accordion-header-active);
+}
+
+.accordion-header[aria-expanded="true"] {
+  background: var(--accordion-header-active);
+}
+
+.accordion-icon {
+  width: var(--accordion-icon-size);
+  height: var(--accordion-icon-size);
+  transition: transform var(--accordion-transition);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.accordion-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--accordion-text);
+}
+
+.accordion-header[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--accordion-transition);
+  background: var(--accordion-bg);
+}
+
+.accordion-content.expanding {
+  transition: max-height var(--accordion-transition);
+}
+
+.accordion-content.collapsing {
+  transition: max-height var(--accordion-transition);
+}
+
+.accordion-content-inner {
+  padding: var(--accordion-padding);
+  color: var(--accordion-text-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (prefers-color-scheme: light) {
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

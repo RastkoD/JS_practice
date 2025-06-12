@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maropost</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <form id="signup-form" class="card">
+          <h2>Join Our Newsletter</h2>
+          <p>Stay updated with our latest news and exclusive content</p>
+
+          <label class="m-t" for="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            required
+            placeholder="Your first name"
+          />
+
+          <label class="m-t" for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="your@email.com"
+          />
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="consent" required />
+            <label class="consent" for="consent"
+              >I agree to receive marketing emails.
+              <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit">SUBSCRIBE NOW</button>
+          <p id="success-msg" class="hidden">Thank you for subscribing!</p>
+
+          <hr />
+        </form>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

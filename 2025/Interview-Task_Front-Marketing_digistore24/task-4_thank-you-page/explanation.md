@@ -1,0 +1,1 @@
+I created a simple, responsive thank-you page. I did not include the tracking pixel because I do not have experience with it yet, and at the moment there is not enought time to dive into learning it properly.
