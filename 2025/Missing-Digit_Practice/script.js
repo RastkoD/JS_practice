@@ -65,3 +65,23 @@ console.log(findMissingDigit("1? + 23 = 35"));
 console.log(findMissingDigit("31 - ?2 = 150"));
 console.log(findMissingDigit("10 / 0 = 0"));
 console.log(findMissingDigit("0? + 1 = 2"));
+
+/*
+function replacer(string) {
+  let count = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === "?") {
+      count++;
+    }
+  }
+
+  if (count !== 1) {
+    return "invalid";
+  } else {
+    return string.replace("?", "X");
+  }
+}
+
+console.log(replacer("hel?lo"));
+console.log(replacer("he??lo"));
+console.log(replacer("hello"));*/
