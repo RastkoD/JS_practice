@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BauBau Form</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="dropdown" id="service-dropdown">
+        <input
+          type="text"
+          placeholder="Search services..."
+          class="dropdown-search"
+        />
+        <ul class="dropdown-list"></ul>
+      </div>
+
+      <div class="dropdown" id="location-dropdown">
+        <input
+          type="text"
+          placeholder="Search locations..."
+          class="dropdown-search"
+        />
+        <ul class="dropdown-list"></ul>
+      </div>
+
+      <div class="buttons">
+        <button type="button" id="refresh" hidden>🔄</button>
+        <button type="button" id="search">Search</button>
+      </div>
+    </div>
+  </body>
+</html>
