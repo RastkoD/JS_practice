@@ -1,8 +1,9 @@
 import "./App.css";
+import { useState } from "react";
 import Person from "./components/PersonAddress/Person";
+import Task from "./components/tasks/Task";
 
-{
-  /*const person = [
+/*const person = [
   {
     id: 1,
     name: "Maja Petrović",
@@ -37,10 +38,34 @@ import Person from "./components/PersonAddress/Person";
     },
   },
 ]; */
-}
+
+const tasks = [
+  { id: 1, name: "Learn React", done: false },
+  { id: 2, name: "Buy groceries", done: true },
+  { id: 3, name: "Walk the dog", done: false },
+];
 
 function App() {
-  return <>{/*<Person person={person} />*/}</>;
+  const [tasksState, setTasksState] = useState(tasks);
+
+  function toggleTask(id) {
+    setTasksState((prev) =>
+      prev.map((t) => (t.id === id ? { ...t, done: !t.done } : t))
+    );
+  }
+
+  return (
+    <>
+      {tasksState.map((t) => (
+        <Task
+          key={t.id}
+          taskName={t.name}
+          done={t.done}
+          toggle={() => toggleTask(t.id)}
+        />
+      ))}
+    </>
+  );
 }
 
 export default App;
