@@ -1,4 +1,4 @@
-function Task({ taskName, done, toggle }) {
+function Task({ taskName, done, toggle, deleteTask }) {
   return (
     <div>
       <span
@@ -10,6 +10,7 @@ function Task({ taskName, done, toggle }) {
       </span>{" "}
       - <span>{done ? "Done" : "Not Done"}</span>
       <button onClick={toggle}>Toggle Done</button>
+      <button onClick={deleteTask}>Delete Task</button>
     </div>
   );
 }

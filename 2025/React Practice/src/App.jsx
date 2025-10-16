@@ -1,7 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import Person from "./components/PersonAddress/Person";
-import Task from "./components/tasks/Task";
+import TaskList from "./components/tasks/TaskList";
+import AddTask from "./components/tasks/AddTask";
 
 /*const person = [
   {
@@ -39,14 +40,14 @@ import Task from "./components/tasks/Task";
   },
 ]; */
 
-const tasks = [
+const initialTasks = [
   { id: 1, name: "Learn React", done: false },
   { id: 2, name: "Buy groceries", done: true },
   { id: 3, name: "Walk the dog", done: false },
 ];
 
 function App() {
-  const [tasksState, setTasksState] = useState(tasks);
+  const [tasksState, setTasksState] = useState(initialTasks);
 
   function toggleTask(id) {
     setTasksState((prev) =>
@@ -54,16 +55,27 @@ function App() {
     );
   }
 
+  function deleteTask(id) {
+    setTasksState((prev) => prev.filter((t) => t.id !== id));
+  }
+
+  function addTask(name) {
+    setTasksState((prev) => [...prev, { id: Date.now(), name, done: false }]);
+  }
+
+  function clearAll() {
+    setTasksState([]);
+  }
+
   return (
     <>
-      {tasksState.map((t) => (
-        <Task
-          key={t.id}
-          taskName={t.name}
-          done={t.done}
-          toggle={() => toggleTask(t.id)}
-        />
-      ))}
+      <AddTask onAdd={addTask} />
+      <TaskList
+        tasks={tasksState}
+        onToggle={toggleTask}
+        onDelete={deleteTask}
+        onClearAll={clearAll}
+      />
     </>
   );
 }
