@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FKL - Evidencija Rada</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Evidencija Radnika FKL</h2>
+    <div class="card">
+      <h3>Prikaz po danu</h3>
+      <div class="input-group">
+        <label for="date-single">Datum:</label>
+        <input type="date" id="date-single" />
+      </div>
+      <button id="btn-daily">Učitaj Dan</button>
+      <div id="out-daily" class="output-area"></div>
+    </div>
+    <div class="card">
+      <h3>Prikaz po radniku (Period)</h3>
+      <div class="input-group">
+        <label for="worker-id">ID Radnika:</label>
+        <input type="number" id="worker-id" placeholder="npr. 0099" />
+      </div>
+      <div class="input-group">
+        <label for="date-start">Od:</label>
+        <input type="date" id="date-start" />
+      </div>
+      <div class="input-group">
+        <label for="date-end">Do:</label>
+        <input type="date" id="date-end" />
+      </div>
+      <button id="btn-range">Učitaj Period</button>
+      <div id="out-range" class="output-area"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
